@@ -44,7 +44,7 @@ const widgetHtml = /* html */ `<!DOCTYPE html>
   import { App } from "https://esm.sh/@modelcontextprotocol/ext-apps/app-with-deps";
 
   const app = new App(
-  	{name: 'Stocks App', version: '1.0'}
+  	{name: 'Nomad Stocks App', version: '1.0'}
   )
 
   app.ontoolresult = ({structuredContent}) => {
@@ -89,10 +89,17 @@ export default {
 					ui: {
 						resourceUri: 'ui://stocks-ui',
 					},
+					'openai/toolInvocation/invoking': 'Getting stocks...',
+					'openai/toolInvocation/invoked': 'Search complete',
+				},
+				annotations: {
+					openWorldHint: true,
+					readOnlyHint: true,
 				},
 				// { symbol: "AAPL" }
 			},
 			async ({ symbol }) => {
+				await new Promise((r) => setTimeout(r, 10000));
 				return {
 					content: [
 						{
