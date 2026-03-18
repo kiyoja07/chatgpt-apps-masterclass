@@ -6,13 +6,15 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "server",
 	"main": "src/index.ts",
-	"compatibility_date": "2026-03-10",
+	"compatibility_date": "2026-03-01",
 	"observability": {
-		"enabled": true
+		"enabled": true,
 	},
-	"compatibility_flags": [
-		"nodejs_compat"
-	]
+	"compatibility_flags": ["nodejs_compat"],
+	"assets": {
+		"directory": "dist",
+		"binding": "ASSETS",
+	},
 	/**
 	 * Smart Placement
 	 * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
