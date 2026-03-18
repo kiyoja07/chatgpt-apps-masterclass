@@ -1,3 +1,7 @@
+# Docs
+
+https://developers.openai.com/apps-sdk
+
 # ChatGPT Apps Master Class
 
 #2.1 Your First Worker
@@ -20,4 +24,24 @@ npm i @modelcontextprotocol/sdk zod agents
 
 ```bash
 npm run deploy
+```
+
+#3.3 Recap
+
+# App Development Environment
+
+#4.0 Server Setup
+
+server 세팅
+
+```bash
+npm create cloudflare@latest
+```
+
+```bash
+ npm i @modelcontextprotocol/sdk zod agents @modelcontextprotocol/ext-apps
+```
+
+```bash
+npm create vite@latest
 ```
