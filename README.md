@@ -30,7 +30,7 @@ npm run deploy
 
 # App Development Environment
 
-#4.0 Server Setup
+#4.2 App Resource
 
 server 세팅
 
@@ -39,9 +39,19 @@ npm create cloudflare@latest
 ```
 
 ```bash
- npm i @modelcontextprotocol/sdk zod agents @modelcontextprotocol/ext-apps
+npm i @modelcontextprotocol/sdk zod agents @modelcontextprotocol/ext-apps
 ```
+
+widgets 세팅
 
 ```bash
 npm create vite@latest
+```
+
+```bash
+npm run cf-typegen
+```
+
+```bash
+npx @modelcontextprotocol/inspector
 ```
