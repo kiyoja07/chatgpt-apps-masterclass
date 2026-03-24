@@ -30,9 +30,9 @@ npm run deploy
 
 # App Development Environment
 
-#4.2 App Resource
+#4.5 Apps SDK UI
 
-server 세팅
+### server 세팅
 
 ```bash
 npm create cloudflare@latest
@@ -42,16 +42,32 @@ npm create cloudflare@latest
 npm i @modelcontextprotocol/sdk zod agents @modelcontextprotocol/ext-apps
 ```
 
-widgets 세팅
+```bash
+npm run cf-typegen
+```
+
+```bash
+npx @modelcontextprotocol/inspector # mcp inspector를 실행한다
+```
+
+### widgets 세팅
 
 ```bash
 npm create vite@latest
 ```
 
 ```bash
-npm run cf-typegen
+npm add @ladle/react
 ```
 
+[Apps SDK UI 문서](https://openai.github.io/apps-sdk-ui/?path=/docs/overview-introduction--docs)
+
+# Movie App
+
+#5.3 Secrets
+
+[themoviedb.org](https://www.themoviedb.org/)
+
 ```bash
-npx @modelcontextprotocol/inspector
+npx wrangler@latest secret put API_KEY # cloudflare에 API_KEY를 세팅한다
 ```
