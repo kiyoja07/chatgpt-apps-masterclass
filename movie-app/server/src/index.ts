@@ -19,7 +19,7 @@ export default {
 		const API_KEY = env.API_KEY;
 
 		const server = new McpServer({
-			name: 'Movies',
+			name: 'Movies Server',
 			version: '1.0',
 		});
 
@@ -31,6 +31,19 @@ export default {
 						uri: WIDGET_URI,
 						text: await html.text(),
 						mimeType: RESOURCE_MIME_TYPE,
+						_meta: {
+							ui: {
+								csp: {
+									connectDomains: ['https://*.workers.dev'],
+									resourceDomains: [
+										'https://*.workers.dev',
+										'https://fonts.googleapis.com',
+										'https://fonts.gstatic.com',
+										'https://image.tmdb.org',
+									],
+								},
+							},
+						},
 					},
 				],
 			};
@@ -58,7 +71,7 @@ export default {
 				const movies = await fetchUpcomingMovies(API_KEY);
 				console.log('movies response:', JSON.stringify(movies).slice(0, 200));
 				return {
-					content: [{ text: 'stuff', type: 'text' }],
+					content: [{ text: JSON.stringify(movies), type: 'text' }],
 					structuredContent: { movies },
 				};
 			},
@@ -147,8 +160,7 @@ export default {
 			async ({ movieId }) => {
 				const reviews = await fetchMovieReviews(movieId, API_KEY);
 				return {
-					content: [{ text: 'stuff', type: 'text' }],
-					structuredContent: { reviews },
+					content: [{ text: JSON.stringify(reviews), type: 'text' }],
 				};
 			},
 		);
@@ -170,8 +182,7 @@ export default {
 			async () => {
 				const genres = await fetchMovieGenres(API_KEY);
 				return {
-					content: [{ text: 'stuff', type: 'text' }],
-					structuredContent: { genres },
+					content: [{ text: JSON.stringify(genres), type: 'text' }],
 				};
 			},
 		);

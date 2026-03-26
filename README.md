@@ -62,9 +62,13 @@ npm add @ladle/react
 
 [Apps SDK UI 문서](https://openai.github.io/apps-sdk-ui/?path=/docs/overview-introduction--docs)
 
+```bash
+npm install @openai/apps-sdk-ui
+```
+
 # Movie App
 
-#5.3 Secrets
+#5.6 CSP
 
 [themoviedb.org](https://www.themoviedb.org/)
 
