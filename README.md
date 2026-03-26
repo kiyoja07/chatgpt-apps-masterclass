@@ -68,10 +68,14 @@ npm install @openai/apps-sdk-ui
 
 # Movie App
 
-#5.6 CSP
+#5.7 Dark Mode - Challenge
 
 [themoviedb.org](https://www.themoviedb.org/)
 
 ```bash
 npx wrangler@latest secret put API_KEY # cloudflare에 API_KEY를 세팅한다
 ```
+
+# Flashcards App
+
+#6.0 Introduction
