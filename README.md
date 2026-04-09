@@ -83,3 +83,5 @@ npx wrangler@latest secret put API_KEY # cloudflare에 API_KEY를 세팅한다
 ```bash
 git checkout -b flashcards # 같은 폴더 안에서 branch를 다르게 해서 다른 제품을 cloudflare workers에 deploy한다.
 ```
+
+branch를 변경하여 새로 배포하면 vite.config.ts에서 FULL_URL를 새로 변경한다.
