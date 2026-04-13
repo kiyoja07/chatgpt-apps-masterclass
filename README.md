@@ -43,7 +43,7 @@ npm i @modelcontextprotocol/sdk zod agents @modelcontextprotocol/ext-apps
 ```
 
 ```bash
-npm run cf-typegen
+npm run cf-typegen # 런타임 설정과 코드 타입 정보의 동기화 -> 환경 설정을 바꾼 뒤 실행한다
 ```
 
 ```bash
@@ -82,6 +82,11 @@ npx wrangler@latest secret put API_KEY # cloudflare에 API_KEY를 세팅한다
 
 ```bash
 git checkout -b flashcards # 같은 폴더 안에서 branch를 다르게 해서 다른 제품을 cloudflare workers에 deploy한다.
+# branch를 변경하여 새로 배포하면 vite.config.ts에서 FULL_URL를 새로 변경한다.
 ```
 
-branch를 변경하여 새로 배포하면 vite.config.ts에서 FULL_URL를 새로 변경한다.
+#6.3 Create Deck
+
+```bash
+npx wrangler@latest kv namespace create FLASHCARDS_KV # Cloudflare Workers KV 저장소(네임스페이스)를 새로 생성
+```
