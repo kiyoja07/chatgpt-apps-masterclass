@@ -15,10 +15,10 @@ function App() {
     onAppCreated: (app) => {
       app.ontoolresult = (result) => {
         if (result.structuredContent) {
-          setToolOutput(result.structuredContent as unknown as ToolOutput);
+          setToolOutput(result.structuredContent as unknown as ToolOutput); // MCP Tool의 결과로 structuredContent가 반환된 경우 이를 toolOutput 상태로 설정
         }
         if (result._meta) {
-          setViewUUID(result._meta.viewUUID as unknown as string);
+          setViewUUID(result._meta.viewUUID as unknown as string); // MCP Tool의 결과로 _meta에 viewUUID가 반환된 경우 이를 viewUUID 상태로 설정
         }
       };
     },

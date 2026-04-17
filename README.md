@@ -96,3 +96,17 @@ npx wrangler@latest kv namespace create FLASHCARDS_KV # Cloudflare Workers KV ì 
 ```
 
 #6.11 Ladle
+
+# Workout App
+
+#7.0 Introduction
+
+```bash
+git checkout -b workouts
+```
+
+#7.1 Drizzle
+
+```bash
+npm i dirzzle-orm
+```

@@ -57,6 +57,7 @@ export default {
 		});
 
 		// create deck
+		// registerAppTool(MCP 서버, 도구 이름, 도구 설명 및 입력 스키마, 도구 핸들러)
 		registerAppTool(
 			server,
 			'create-deck',
@@ -69,7 +70,7 @@ export default {
 					deck: deckSchema,
 				},
 				annotations: {
-					readOnlyHint: false,
+					readOnlyHint: false, // 데이터를 변경하지 않는 tool인 경우 true로 설정하여 사용자에게 알릴 수 있음.
 				},
 				_meta: {
 					ui: {
@@ -235,7 +236,7 @@ export default {
 				},
 				_meta: {
 					ui: {
-						visibility: ['app'],
+						visibility: ['app'], // App-only tool : 이 tool은 앱에서만 호출할 수 있으며, AI 모델이 이 tool을 인식하지 못하도록 설정. AI 모델이 실수로 이 도구를 사용하지 않도록 방지할 때 유용.
 					},
 				},
 			},
@@ -283,7 +284,7 @@ export default {
 					deckId: z.string(),
 				},
 				annotations: {
-					destructiveHint: true,
+					destructiveHint: true, // 이 tool은 데이터를 변경하는 도구로서 true로 설정하여 사용자에게 경고할 수 있음.
 				},
 				_meta: {
 					ui: {
