@@ -15,13 +15,13 @@
 		"directory": "dist",
 		"binding": "ASSETS",
 	},
-	"kv_namespaces": [
-		{
-			"binding": "FLASHCARDS_KV",
-			"id": "f17dd1ac8366431e930c3510e744dd3e",
-			"remote": true,
-		},
-	],
+	// "kv_namespaces": [
+	// 	{
+	// 		"binding": "FLASHCARDS_KV",
+	// 		"id": "f17dd1ac8366431e930c3510e744dd3e",
+	// 		"remote": true,
+	// 	},
+	// ],
 	"d1_databases": [
 		{
 			"binding": "DB",

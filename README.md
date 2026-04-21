@@ -105,8 +105,25 @@ npx wrangler@latest kv namespace create FLASHCARDS_KV # Cloudflare Workers KV �
 git checkout -b workouts
 ```
 
-#7.1 Drizzle
+#7.3 Drizzle + D1
+
+server에 설치
 
 ```bash
-npm i dirzzle-orm
+npm i drizzle-orm && npm i drizzle-kit -D
+```
+
+```bash
+# server 폴더에서 실행
+npx wrangler@latest d1 create workouts_database
+npx wrangler@latest d1 migrations apply workouts_database --remote # remote DB에 migration 적용
+npx wrangler@latest d1 migrations apply workouts_database # local DB에 migration 적용
+```
+
+```bash
+npm run cf-typegen
+```
+
+```bash
+npx @modelcontextprotocol/inspector # MCP Inspector 실행
 ```
