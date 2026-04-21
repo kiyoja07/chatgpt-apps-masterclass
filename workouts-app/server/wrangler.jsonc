@@ -22,6 +22,15 @@
 			"remote": true,
 		},
 	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "workouts_database",
+			"database_id": "0bd141fd-1dbb-4746-8071-42504349d26b",
+			"remote": true,
+			"migrations_dir": "drizzle",
+		},
+	],
 	/**
 	 * Smart Placement
 	 * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
