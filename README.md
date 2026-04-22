@@ -105,7 +105,7 @@ npx wrangler@latest kv namespace create FLASHCARDS_KV # Cloudflare Workers KV �
 git checkout -b workouts
 ```
 
-#7.4 Workouts CRUD
+#7.5 Workers AI
 
 server에 설치
 
@@ -127,3 +127,5 @@ npm run cf-typegen
 ```bash
 npx @modelcontextprotocol/inspector # MCP Inspector 실행
 ```
+
+https://developers.cloudflare.com/workers-ai/models/glm-4.7-flash/
