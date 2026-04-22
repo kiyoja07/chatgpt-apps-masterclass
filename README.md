@@ -105,7 +105,7 @@ npx wrangler@latest kv namespace create FLASHCARDS_KV # Cloudflare Workers KV �
 git checkout -b workouts
 ```
 
-#7.3 Drizzle + D1
+#7.4 Workouts CRUD
 
 server에 설치
 
