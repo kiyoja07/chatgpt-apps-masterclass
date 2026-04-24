@@ -105,7 +105,7 @@ npx wrangler@latest kv namespace create FLASHCARDS_KV # Cloudflare Workers KV �
 git checkout -b workouts
 ```
 
-#7.5 Workers AI
+#7.6 UI
 
 server에 설치
 
