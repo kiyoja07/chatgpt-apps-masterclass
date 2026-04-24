@@ -105,7 +105,7 @@ npx wrangler@latest kv namespace create FLASHCARDS_KV # Cloudflare Workers KV �
 git checkout -b workouts
 ```
 
-#7.7 openLink
+#7.8 updateModelContext
 
 server에 설치
 
