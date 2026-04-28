@@ -105,7 +105,7 @@ npx wrangler@latest kv namespace create FLASHCARDS_KV # Cloudflare Workers KV �
 git checkout -b workouts
 ```
 
-#7.8 updateModelContext
+#7.9 requestDisplayMode
 
 server에 설치
 
