@@ -2,8 +2,8 @@ import OAuthProvider from '@cloudflare/workers-oauth-provider';
 import { registerAppResource, registerAppTool, RESOURCE_MIME_TYPE } from '@modelcontextprotocol/ext-apps/server';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { createMcpHandler } from 'agents/mcp';
-import handleAuthorizeGet from './lib/authorize';
 import z from 'zod';
+import { handleAuthorizeGet, handleAuthorizePost } from './lib/authorize';
 
 const privateHandler = {
 	async fetch(request, env, ctx) {
@@ -225,7 +225,12 @@ const publicHandler = {
 		const url = new URL(request.url);
 
 		if (url.pathname === '/authorize') {
-			return handleAuthorizeGet(request, env);
+			if (request.method === 'GET') {
+				return handleAuthorizeGet(request, env);
+			}
+			if (request.method === 'POST') {
+				return handleAuthorizePost(request, env);
+			}
 		}
 		return new Response(null, { status: 404 });
 	},

@@ -152,4 +152,4 @@ npx wrangler@latest kv namespace create ECOMMERCE_OAUTH_KV
 
 http://localhost:8787/.well-known/oauth-authorization-server
 
-#8.6 Authorize Endpoint
+#8.7 Authorize Endpoint II
