@@ -129,3 +129,25 @@ npx @modelcontextprotocol/inspector # MCP Inspector 실행
 ```
 
 https://developers.cloudflare.com/workers-ai/models/glm-4.7-flash/
+
+# Ecommerce App
+
+#8.5 new OAuthProvider
+
+```bash
+git checkout -b ecommerce
+```
+
+```bash
+npm i @cloudflare/workers-oauth-provider # server 폴더에서 설치
+```
+
+```bash
+npx wrangler@latest d1 create ecommerce-database
+```
+
+```bash
+npx wrangler@latest kv namespace create ECOMMERCE_OAUTH_KV
+```
+
+http://localhost:8787/.well-known/oauth-authorization-server
