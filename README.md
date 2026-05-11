@@ -152,4 +152,12 @@ npx wrangler@latest kv namespace create ECOMMERCE_OAUTH_KV
 
 http://localhost:8787/.well-known/oauth-authorization-server
 
-#9.0 Introduction
+#9.1 Database Schema
+
+```bash
+# server 폴더에서 실행
+npm run db:generate
+npm run db:migrate:remote
+```
+
+#9.2 Server Tools
