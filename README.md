@@ -160,4 +160,4 @@ npm run db:generate
 npm run db:migrate:remote
 ```
 
-#9.7 App Tools
+#9.8 downloadFile
