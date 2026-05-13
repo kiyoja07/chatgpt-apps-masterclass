@@ -60,6 +60,11 @@ export default function App() {
     capabilities: {},
     onAppCreated: (app) => {
       app.ontoolresult = handleToolResult;
+      if ((window as any).openai?.toolOutput) {
+        handleToolResult({
+          structuredContent: (window as any).openai.toolOutput,
+        });
+      }
     },
   });
 
