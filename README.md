@@ -160,4 +160,4 @@ npm run db:generate
 npm run db:migrate:remote
 ```
 
-#9.3 Server Tools II
+#9.4 Seed Data
