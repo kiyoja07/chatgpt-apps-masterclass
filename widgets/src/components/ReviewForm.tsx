@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import type { App } from "@modelcontextprotocol/ext-apps";
 import type { Review } from "../types";
 import { StarRating } from "./StarRating";
@@ -15,7 +15,6 @@ export function ReviewForm({ app, productId, onSubmitted }: Props) {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [isPending, setIsPending] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileSelect = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -26,7 +25,6 @@ export function ReviewForm({ app, productId, onSubmitted }: Props) {
       void file;
     } finally {
       setIsUploading(false);
-      if (fileInputRef.current) fileInputRef.current.value = "";
     }
   };
 
@@ -72,23 +70,15 @@ export function ReviewForm({ app, productId, onSubmitted }: Props) {
       )}
       <div className="flex gap-2">
         {!imageUrl && (
-          <>
+          <label className="px-3 py-2 rounded-xl border border-white/10 bg-neutral-900 text-white/60 text-xs font-medium cursor-pointer hover:bg-neutral-800 transition-colors">
             <input
-              ref={fileInputRef}
               type="file"
               accept="image/*"
               onChange={handleFileSelect}
               className="hidden"
             />
-            <button
-              type="button"
-              onClick={() => fileInputRef.current?.click()}
-              disabled={isUploading}
-              className="px-3 py-2 rounded-xl border border-white/10 bg-neutral-900 text-white/60 text-xs font-medium cursor-pointer hover:bg-neutral-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {isUploading ? "Uploading..." : "Attach Photo"}
-            </button>
-          </>
+            {isUploading ? "Uploading..." : "Attach Photo"}
+          </label>
         )}
         <button
           onClick={handleSubmit}
