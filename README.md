@@ -160,4 +160,4 @@ npm run db:generate
 npm run db:migrate:remote
 ```
 
-#10.2 Component Overview
+#10.3 uploadFile
