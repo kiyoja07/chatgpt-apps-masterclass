@@ -10,7 +10,9 @@
 	"observability": {
 		"enabled": true,
 	},
-	"compatibility_flags": ["nodejs_compat"],
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
 	"assets": {
 		"directory": "dist",
 		"binding": "ASSETS",
@@ -40,6 +42,13 @@
 			"id": "5b413e006ee04665b9ee1616ebf43eaa",
 			"remote": true,
 		},
+	],
+	"r2_buckets": [
+		{
+			"bucket_name": "ecommerce-assets",
+			"binding": "BUCKET",
+			"remote": true
+		}
 	],
 	/**
 	 * Smart Placement
