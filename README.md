@@ -160,4 +160,9 @@ npm run db:generate
 npm run db:migrate:remote
 ```
 
-#10.3 uploadFile
+#10.5 R2 Get File
+
+```bash
+npx wrangler@latest r2 bucket create ecommerce-assets # server 폴더에 설치
+npm run cf-typegen
+```
