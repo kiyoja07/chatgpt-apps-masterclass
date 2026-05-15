@@ -160,7 +160,7 @@ npm run db:generate
 npm run db:migrate:remote
 ```
 
-#10.5 R2 Get File
+#10.6 Conclusions
 
 ```bash
 npx wrangler@latest r2 bucket create ecommerce-assets # server 폴더에 설치
