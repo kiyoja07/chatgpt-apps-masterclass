@@ -12,6 +12,11 @@ npx wrangler@latest login # wrangler로 cloudflare에 로그인
 
 ```bash
 npm create cloudflare@latest # worker 프로젝트 만들기
+# 명령어 실행 후 어떤 폴더로 만들 것이냐고 묻는다 -> server 폴더에 만들 것이라고 입력한다. server 폴더가 이미 있으면 안된다
+# │ category Hello World example
+# │ type Worker only
+# │ lang TypeScript
+
 ```
 
 #2.2 Your First MCP Server
@@ -54,6 +59,10 @@ npx @modelcontextprotocol/inspector # mcp inspector를 실행한다
 
 ```bash
 npm create vite@latest
+# 명령어 실행 후 프로젝트 이름 : widgets
+# framework : React
+# variant : TypeScript
+
 ```
 
 ```bash
@@ -166,3 +175,5 @@ npm run db:migrate:remote
 npx wrangler@latest r2 bucket create ecommerce-assets # server 폴더에 설치
 npm run cf-typegen
 ```
+
+https://developers.openai.com/apps-sdk/app-submission-guidelines
